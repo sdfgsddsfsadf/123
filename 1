@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+
+
+int main() {
+
+    int integer;
+        int A1;
+        int A2;
+        int A3;
+        int A4;
+        int res;
+        int suma;
+
+        printf("Vedit 4 chusla: ");
+        scanf("%d", &integer);
+
+        A1 = (integer - (integer % 1000)) / 1000;
+        A2 = ((integer - (integer % 100)) - (integer - (integer % 1000))) / 100;
+        A3 = ((integer - (integer % 10)) - (integer - (integer % 100))) / 10;
+        A4 = integer % 10;
+
+        res = A1 - A4;
+        suma = A2 + A3;
+
+        printf("\n\t res \t suma \n ");
+            printf("\n\t %d \t %d \n", res, suma);
+
+return 0;
+}
